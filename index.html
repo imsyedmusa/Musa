@@ -595,21 +595,42 @@ footer{border-top:1px solid var(--line);padding-top:clamp(40px,6vw,72px);overflo
         <div class="row"><span>Location</span><b>Sylhet, Bangladesh</b></div>
       </div>
     </div>
-    <form id="contactForm" novalidate>
-      <div class="f2">
-        <div class="field"><label for="fName">Full Name</label><input id="fName" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="fEmail">Email Address</label><input id="fEmail" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="f2">
-        <div class="field"><label for="fType">Project Type</label>
-          <select id="fType" name="type"><option value="">Select project type</option><option>New Website</option><option>Website Redesign</option><option>Figma to WordPress</option><option>WooCommerce</option><option>Landing Page Design</option><option>Speed Optimization</option><option>Maintenance</option><option>Other</option></select></div>
-        <div class="field"><label for="fBudget">Budget</label>
-          <select id="fBudget" name="budget"><option value="">Select budget</option><option>Under $200</option><option>$200 – $500</option><option>$500 – $1,000</option><option>$1,000+</option></select></div>
-      </div>
-      <div class="field"><label for="fMsg">Tell Me About Your Project</label><textarea id="fMsg" name="message"></textarea></div>
-      <button class="btn btn-primary" type="submit" style="justify-self:start">Send Message ↗</button>
-      <p class="form-note" id="formNote" role="status"></p>
-    </form>
+    <form class="card form-card" id="contactForm">
+        <input type="hidden" name="access_key" value="7df3b7ee-c9b7-4157-89eb-f8a9bb89aef1">
+        <input type="hidden" name="subject" value="New project inquiry from portfolio site">
+        <input type="hidden" name="from_name" value="Syed Musa Portfolio">
+        <div class="form-row">
+          <div class="field"><label>Full Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Email Address</label><input type="email" name="email" placeholder="you@company.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Project Type</label>
+            <select name="project_type">
+              <option>Select project type</option>
+              <option>New Website</option>
+              <option>Website Redesign</option>
+              <option>Figma to WordPress</option>
+              <option>WooCommerce</option>
+              <option>Landing Page Design</option>
+              <option>Speed Optimization</option>
+              <option>Maintenance</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Budget</label>
+            <select name="budget">
+              <option>Select budget</option>
+              <option>Under $200</option>
+              <option>$200 – $500</option>
+              <option>$500 – $1,000</option>
+              <option>$1,000+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Tell Me About Your Project</label><textarea rows="4" name="message" placeholder="Tell me about your project" required></textarea></div>
+        <button class="btn btn-solid send-btn" type="submit">Send Message ↗</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
   </div>
 </section>
 </main>
